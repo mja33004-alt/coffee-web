@@ -1,0 +1,582 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Isles of Scilly Coffee Roaster — Coffee Beans</title>
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+
+<div class="announce-bar">Free UK delivery on orders over £25 &nbsp;·&nbsp; Hand Roasted on St Martin's, Isle of Scilly &nbsp;·&nbsp; New 2026 harvest now in stock</div>
+
+<header class="header header--block" id="header">
+  <nav class="block-nav">
+    <a href="./about.html" style="font-size: 14px">About</a>
+    <div class="block-nav-item">
+      <button type="button" class="block-nav-trigger" aria-haspopup="true" aria-expanded="false">Shop</button>
+      <div class="block-nav-menu" role="menu">
+        <a href="./coffee.html" role="menuitem">Coffee</a>
+        <a href="./tea.html" role="menuitem">Tea</a>
+      </div>
+    </div>
+    <a href="./wholesale.html" style="font-size: 14px">Wholesale</a>
+  </nav>
+
+  <a href="./index.html" class="block-logo" aria-label="Isles of Scilly Coffee Roaster — home">
+    <span class="block-line">ISLES</span>
+    <span class="block-line">&nbsp;&nbsp;OF&nbsp;&nbsp;</span>
+    <span class="block-line">SCILLY</span>
+    <span class="block-line block-line--small">COFFEE</span>
+    <span class="block-line block-line--small">ROASTER</span>
+  </a>
+
+  <button class="block-cart" id="cartBtn" aria-label="Open basket" style="font-size: 13px; gap: 6px;">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/></svg>
+    <span class="block-cart-count" id="cartCount">0</span>
+  </button>
+</header>
+<section class="page-hero coffee-hero" data-bg-char="咖">
+  <span class="page-hero-tag">Coffee Collection</span>
+  <h1>Single Origin Coffee</h1>
+  <p class="page-hero-sub">Eight origins from Yunnan, China — roasted to order in small batches on St Martin's, Isle of Scilly.</p>
+</section>
+
+
+<main class="shop-main">
+
+  <!-- ══ SECTION 1: ROASTED BEANS ══ -->
+  <div class="product-section">
+    <div class="product-grid">
+
+      <!-- 1. Floral Caturra -->
+      <article class="product-card" data-prices='{"225g":12.50,"500g":27.50,"1kg":55.00}'>
+        <a href="./products/xiding-caturra.html" style="display:contents">
+          <div class="card-img cg-1">
+            <svg class="stone-svg" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+              <ellipse cx="100" cy="172" rx="62" ry="5" fill="#8b5a3c" opacity="0.7"/>
+              <path d="M 72 170 Q 62 132 66 100 Q 70 68 82 50 Q 96 36 110 40 Q 126 50 130 80 Q 135 112 128 142 Q 126 162 128 170 Z" fill="#3a3d40" stroke="#1a1d1f" stroke-width="1.5"/>
+              <path d="M 80 62 Q 92 52 105 50 Q 98 68 88 82" fill="#6b6d6f" opacity="0.5"/>
+              <path d="M 96 90 Q 106 110 101 138" stroke="#1a1d1f" stroke-width="1" fill="none" opacity="0.6"/>
+              <path d="M 76 112 Q 84 124 82 148" stroke="#1a1d1f" stroke-width="0.8" fill="none" opacity="0.4"/>
+              <circle cx="92" cy="78" r="0.8" fill="#1a1d1f" opacity="0.5"/>
+              <circle cx="112" cy="95" r="0.7" fill="#1a1d1f" opacity="0.4"/>
+            </svg>
+            <span class="card-badge">No. 1</span>
+            <div class="card-roast-tag">Caturra · Washed · 1,500m</div>
+          </div>
+        </a>
+        <div class="card-body">
+          <p class="card-origin">Xiding · China</p>
+          <h3 class="card-title">Floral Caturra</h3>
+          <p class="card-variety">Caturra · Washed · 1,500m · 15–18#</p>
+          <p class="card-flavor">White flowers, cherry, bright sweet-acid balance</p>
+          <div class="card-selectors">
+            <div class="selector-row">
+              <div class="selector-group">
+                <label>Size</label>
+                <div class="select-wrap">
+                  <select class="size-sel" onchange="updatePrice(this)">
+                    <option value="225g" selected>225g — £12.50</option>
+                    <option value="500g">500g — £27.50</option>
+                    <option value="1kg">1kg — £55.00</option>
+                  </select>
+                </div>
+              </div>
+              <div class="selector-group">
+                <label>Grind</label>
+                <div class="select-wrap">
+                  <select class="grind-sel">
+                    <option>Whole Bean</option>
+                    <option>Espresso</option>
+                    <option>French Press</option>
+                    <option>Filter / Drip</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="card-footer">
+            <span class="card-price">£12.50</span>
+            <button class="btn-add" onclick="addToCart(this)">Add to Basket</button>
+          </div>
+        </div>
+        <a href="./products/xiding-caturra.html" class="card-detail-link">View Full Details &rarr;</a>
+      </article>
+
+      <!-- 2. Berry Typica -->
+      <article class="product-card" data-prices='{"225g":12.00,"500g":26.50,"1kg":52.50}'>
+        <a href="./products/menglian-typica-a.html" style="display:contents">
+          <div class="card-img cg-2">
+            <svg class="stone-svg" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+              <ellipse cx="100" cy="172" rx="68" ry="5" fill="#8b5a3c" opacity="0.7"/>
+              <path d="M 42 170 Q 36 142 44 118 Q 56 92 86 82 Q 116 74 140 88 Q 162 106 162 132 Q 162 158 155 170 Z" fill="#6b6d6f" stroke="#3a3d40" stroke-width="1.5"/>
+              <path d="M 56 100 Q 82 90 104 92 Q 92 106 74 116" fill="#b8b6b0" opacity="0.45"/>
+              <path d="M 60 140 Q 90 136 128 142" stroke="#3a3d40" stroke-width="0.8" fill="none" opacity="0.5"/>
+              <path d="M 48 125 Q 62 118 76 122" stroke="#3a3d40" stroke-width="0.7" fill="none" opacity="0.4"/>
+              <circle cx="70" cy="125" r="0.8" fill="#3a3d40" opacity="0.4"/>
+              <circle cx="120" cy="105" r="0.7" fill="#3a3d40" opacity="0.4"/>
+            </svg>
+            <span class="card-badge">No. 2</span>
+            <div class="card-roast-tag">Typica · Washed · 1,500m</div>
+          </div>
+        </a>
+        <div class="card-body">
+          <p class="card-origin">Menglian · China</p>
+          <h3 class="card-title">Berry Typica</h3>
+          <p class="card-variety">Typica · Washed · 1,500m · 15–18#</p>
+          <p class="card-flavor">Nuts, wax apple, cedarwood</p>
+          <div class="card-selectors">
+            <div class="selector-row">
+              <div class="selector-group">
+                <label>Size</label>
+                <div class="select-wrap">
+                  <select class="size-sel" onchange="updatePrice(this)">
+                    <option value="225g" selected>225g — £12.00</option>
+                    <option value="500g">500g — £26.50</option>
+                    <option value="1kg">1kg — £52.50</option>
+                  </select>
+                </div>
+              </div>
+              <div class="selector-group">
+                <label>Grind</label>
+                <div class="select-wrap">
+                  <select class="grind-sel">
+                    <option>Whole Bean</option>
+                    <option>Espresso</option>
+                    <option>French Press</option>
+                    <option>Filter / Drip</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="card-footer">
+            <span class="card-price">£12.00</span>
+            <button class="btn-add" onclick="addToCart(this)">Add to Basket</button>
+          </div>
+        </div>
+        <a href="./products/menglian-typica-a.html" class="card-detail-link">View Full Details &rarr;</a>
+      </article>
+
+      <!-- 3. Natural Bourbon -->
+      <article class="product-card" data-prices='{"225g":13.00,"500g":28.50,"1kg":57.00}'>
+        <a href="./products/menglian-yellow-bourbon.html" style="display:contents">
+          <div class="card-img cg-3">
+            <svg class="stone-svg" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+              <ellipse cx="100" cy="172" rx="66" ry="5" fill="#8b5a3c" opacity="0.7"/>
+              <path d="M 62 170 Q 56 144 58 116 Q 64 84 90 68 Q 112 58 130 72 Q 148 88 148 118 Q 148 150 140 170 Z" fill="#8b7040" stroke="#6b5020" stroke-width="1.5"/>
+              <path d="M 72 80 Q 96 68 115 72 Q 100 88 82 98" fill="#c4a860" opacity="0.45"/>
+              <path d="M 85 115 Q 100 120 118 118" stroke="#6b5020" stroke-width="0.8" fill="none" opacity="0.5"/>
+              <path d="M 75 138 Q 95 142 120 140" stroke="#6b5020" stroke-width="0.7" fill="none" opacity="0.4"/>
+              <circle cx="100" cy="100" r="0.8" fill="#6b5020" opacity="0.4"/>
+            </svg>
+            <span class="card-badge">No. 3</span>
+            <div class="card-roast-tag">Yellow Bourbon · Natural · 1,500m</div>
+          </div>
+        </a>
+        <div class="card-body">
+          <p class="card-origin">Menglian · China</p>
+          <h3 class="card-title">Natural Bourbon</h3>
+          <p class="card-variety">Yellow Bourbon · Natural · 1,500m · 15–18#</p>
+          <p class="card-flavor">Liqueur chocolate, blackcurrant, dark fruits</p>
+          <div class="card-selectors">
+            <div class="selector-row">
+              <div class="selector-group">
+                <label>Size</label>
+                <div class="select-wrap">
+                  <select class="size-sel" onchange="updatePrice(this)">
+                    <option value="225g" selected>225g — £13.00</option>
+                    <option value="500g">500g — £28.50</option>
+                    <option value="1kg">1kg — £57.00</option>
+                  </select>
+                </div>
+              </div>
+              <div class="selector-group">
+                <label>Grind</label>
+                <div class="select-wrap">
+                  <select class="grind-sel">
+                    <option>Whole Bean</option>
+                    <option>Espresso</option>
+                    <option>French Press</option>
+                    <option>Filter / Drip</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="card-footer">
+            <span class="card-price">£13.00</span>
+            <button class="btn-add" onclick="addToCart(this)">Add to Basket</button>
+          </div>
+        </div>
+        <a href="./products/menglian-yellow-bourbon.html" class="card-detail-link">View Full Details &rarr;</a>
+      </article>
+
+      <!-- 4. Menglian Catimor -->
+      <article class="product-card" data-prices='{"225g":8.50,"500g":19.00,"1kg":38.00}'>
+        <a href="./products/menglian-catimor.html" style="display:contents">
+          <div class="card-img cg-4">
+            <svg class="stone-svg" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+              <ellipse cx="100" cy="172" rx="74" ry="5" fill="#8b5a3c" opacity="0.7"/>
+              <path d="M 30 170 Q 28 150 38 128 Q 54 106 100 102 Q 146 106 162 128 Q 172 150 170 170 Z" fill="#6b5030" stroke="#4a3018" stroke-width="1.5"/>
+              <path d="M 52 118 Q 76 108 100 108 Q 86 122 68 130" fill="#9a7850" opacity="0.4"/>
+              <path d="M 60 148 Q 100 144 140 148" stroke="#4a3018" stroke-width="0.8" fill="none" opacity="0.5"/>
+              <path d="M 45 135 Q 60 130 75 133" stroke="#4a3018" stroke-width="0.7" fill="none" opacity="0.4"/>
+              <circle cx="118" cy="122" r="0.8" fill="#4a3018" opacity="0.4"/>
+            </svg>
+            <span class="card-badge">No. 4</span>
+            <div class="card-roast-tag">Catimor · Washed · 1,400m</div>
+          </div>
+        </a>
+        <div class="card-body">
+          <p class="card-origin">Menglian · China</p>
+          <h3 class="card-title">Menglian Catimor</h3>
+          <p class="card-variety">Catimor · Washed · 1,400m · 16–18#</p>
+          <p class="card-flavor">Nuts, caramel — very smooth, suitable for blending with natural beans</p>
+          <div class="card-selectors">
+            <div class="selector-row">
+              <div class="selector-group">
+                <label>Size</label>
+                <div class="select-wrap">
+                  <select class="size-sel" onchange="updatePrice(this)">
+                    <option value="225g" selected>225g — £8.50</option>
+                    <option value="500g">500g — £19.00</option>
+                    <option value="1kg">1kg — £38.00</option>
+                  </select>
+                </div>
+              </div>
+              <div class="selector-group">
+                <label>Grind</label>
+                <div class="select-wrap">
+                  <select class="grind-sel">
+                    <option>Whole Bean</option>
+                    <option>Espresso</option>
+                    <option>French Press</option>
+                    <option>Filter / Drip</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="card-footer">
+            <span class="card-price">£8.50</span>
+            <button class="btn-add" onclick="addToCart(this)">Add to Basket</button>
+          </div>
+        </div>
+        <a href="./products/menglian-catimor.html" class="card-detail-link">View Full Details &rarr;</a>
+      </article>
+
+      <!-- 5. Honey Catimor -->
+      <article class="product-card" data-prices='{"225g":10.50,"500g":23.00,"1kg":45.50}'>
+        <div class="card-img cg-5">
+          <svg class="stone-svg" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+            <ellipse cx="100" cy="172" rx="60" ry="5" fill="#8b5a3c" opacity="0.7"/>
+            <path d="M 68 170 Q 60 138 66 104 Q 74 70 92 52 Q 104 44 116 54 Q 130 72 134 106 Q 138 140 132 170 Z" fill="#8b6830" stroke="#6b4810" stroke-width="1.5"/>
+            <path d="M 78 66 Q 96 50 114 58 Q 102 76 86 86" fill="#c4a050" opacity="0.45"/>
+            <path d="M 95 100 Q 100 118 98 142" stroke="#6b4810" stroke-width="1" fill="none" opacity="0.6"/>
+            <path d="M 78 120 Q 88 130 85 150" stroke="#6b4810" stroke-width="0.7" fill="none" opacity="0.4"/>
+            <circle cx="112" cy="112" r="0.8" fill="#6b4810" opacity="0.4"/>
+          </svg>
+          <span class="card-badge">No. 5</span>
+          <div class="card-roast-tag">Catimor · Honey · 1,400m</div>
+        </div>
+        <div class="card-body">
+          <p class="card-origin">Menglian · China</p>
+          <h3 class="card-title">Honey Catimor</h3>
+          <p class="card-variety">Catimor · Honey Process · 1,400m · 14–18#</p>
+          <p class="card-flavor">Green tea, sticky rice tea — low acidity, high sweetness</p>
+          <div class="card-selectors">
+            <div class="selector-row">
+              <div class="selector-group">
+                <label>Size</label>
+                <div class="select-wrap">
+                  <select class="size-sel" onchange="updatePrice(this)">
+                    <option value="225g" selected>225g — £10.50</option>
+                    <option value="500g">500g — £23.00</option>
+                    <option value="1kg">1kg — £45.50</option>
+                  </select>
+                </div>
+              </div>
+              <div class="selector-group">
+                <label>Grind</label>
+                <div class="select-wrap">
+                  <select class="grind-sel">
+                    <option>Whole Bean</option>
+                    <option>Espresso</option>
+                    <option>French Press</option>
+                    <option>Filter / Drip</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="card-footer">
+            <span class="card-price">£10.50</span>
+            <button class="btn-add" onclick="addToCart(this)">Add to Basket</button>
+          </div>
+        </div>
+      </article>
+
+      <!-- 6. Natural Sarchimor -->
+      <article class="product-card" data-prices='{"225g":9.50,"500g":21.00,"1kg":42.00}'>
+        <a href="./products/menglian-sarchimor.html" style="display:contents">
+          <div class="card-img cg-6">
+            <svg class="stone-svg" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+              <ellipse cx="100" cy="172" rx="70" ry="5" fill="#8b5a3c" opacity="0.7"/>
+              <path d="M 38 170 Q 32 148 40 122 Q 52 96 80 84 Q 110 76 135 90 Q 158 104 160 132 Q 163 155 158 170 Z" fill="#4a5840" stroke="#2a3820" stroke-width="1.5"/>
+              <path d="M 52 98 Q 76 86 105 88 Q 90 104 68 112" fill="#7a8870" opacity="0.4"/>
+              <path d="M 70 132 Q 95 128 128 134" stroke="#2a3820" stroke-width="0.8" fill="none" opacity="0.5"/>
+              <path d="M 48 148 Q 65 144 82 147" stroke="#2a3820" stroke-width="0.7" fill="none" opacity="0.4"/>
+              <circle cx="128" cy="118" r="0.8" fill="#2a3820" opacity="0.4"/>
+            </svg>
+            <span class="card-badge">No. 6</span>
+            <div class="card-roast-tag">Sarchimor · Natural · 1,400m</div>
+          </div>
+        </a>
+        <div class="card-body">
+          <p class="card-origin">Menglian · China</p>
+          <h3 class="card-title">Natural Sarchimor</h3>
+          <p class="card-variety">Sarchimor · Natural · 1,400m · 15–18#</p>
+          <p class="card-flavor">Rum, vanilla, cocoa, caramel</p>
+          <div class="card-selectors">
+            <div class="selector-row">
+              <div class="selector-group">
+                <label>Size</label>
+                <div class="select-wrap">
+                  <select class="size-sel" onchange="updatePrice(this)">
+                    <option value="225g" selected>225g — £9.50</option>
+                    <option value="500g">500g — £21.00</option>
+                    <option value="1kg">1kg — £42.00</option>
+                  </select>
+                </div>
+              </div>
+              <div class="selector-group">
+                <label>Grind</label>
+                <div class="select-wrap">
+                  <select class="grind-sel">
+                    <option>Whole Bean</option>
+                    <option>Espresso</option>
+                    <option>French Press</option>
+                    <option>Filter / Drip</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="card-footer">
+            <span class="card-price">£9.50</span>
+            <button class="btn-add" onclick="addToCart(this)">Add to Basket</button>
+          </div>
+        </div>
+        <a href="./products/menglian-sarchimor.html" class="card-detail-link">View Full Details &rarr;</a>
+      </article>
+
+      <!-- 7. Pu'er Catimor -->
+      <article class="product-card" data-prices='{"225g":11.50,"500g":24.50,"1kg":49.00}'>
+        <a href="./products/puer-catimor.html" style="display:contents">
+          <div class="card-img cg-7">
+            <svg class="stone-svg" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+              <ellipse cx="100" cy="172" rx="70" ry="5" fill="#8b5a3c" opacity="0.7"/>
+              <path d="M 40 170 Q 32 142 40 116 Q 50 90 80 80 Q 110 72 140 85 Q 164 100 166 130 Q 168 158 158 170 Z" fill="#5c3c20" stroke="#3a2410" stroke-width="1.5"/>
+              <path d="M 55 100 Q 80 90 100 92 Q 90 106 75 115" fill="#8a6040" opacity="0.5"/>
+              <path d="M 60 140 Q 90 136 130 142 Q 150 145 158 150" stroke="#3a2410" stroke-width="0.8" fill="none" opacity="0.5"/>
+              <path d="M 45 126 Q 60 120 76 124" stroke="#3a2410" stroke-width="0.7" fill="none" opacity="0.4"/>
+              <circle cx="110" cy="108" r="0.8" fill="#3a2410" opacity="0.4"/>
+            </svg>
+            <span class="card-badge">No. 7</span>
+            <div class="card-roast-tag">Catimor · Natural · Pu'er</div>
+          </div>
+        </a>
+        <div class="card-body">
+          <p class="card-origin">Pu'er · China</p>
+          <h3 class="card-title">Pu'er Catimor</h3>
+          <p class="card-variety">Catimor · Natural</p>
+          <p class="card-flavor">Red wine, maple syrup, nuts, black tea</p>
+          <div class="card-selectors">
+            <div class="selector-row">
+              <div class="selector-group">
+                <label>Size</label>
+                <div class="select-wrap">
+                  <select class="size-sel" onchange="updatePrice(this)">
+                    <option value="225g" selected>225g — £11.50</option>
+                    <option value="500g">500g — £24.50</option>
+                    <option value="1kg">1kg — £49.00</option>
+                  </select>
+                </div>
+              </div>
+              <div class="selector-group">
+                <label>Grind</label>
+                <div class="select-wrap">
+                  <select class="grind-sel">
+                    <option>Whole Bean</option>
+                    <option>Espresso</option>
+                    <option>French Press</option>
+                    <option>Filter / Drip</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="card-footer">
+            <span class="card-price">£11.50</span>
+            <button class="btn-add" onclick="addToCart(this)">Add to Basket</button>
+          </div>
+        </div>
+        <a href="./products/puer-catimor.html" class="card-detail-link">View Full Details &rarr;</a>
+      </article>
+
+      <!-- 8. Honey Caturra -->
+      <article class="product-card" data-prices='{"225g":12.00,"500g":26.50,"1kg":52.50}'>
+        <div class="card-img cg-8">
+          <svg class="stone-svg" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+            <ellipse cx="100" cy="172" rx="62" ry="5" fill="#8b5a3c" opacity="0.7"/>
+            <path d="M 72 170 Q 62 138 68 106 Q 76 72 94 55 Q 106 46 118 55 Q 132 72 136 108 Q 140 140 134 170 Z" fill="#9a7030" stroke="#7a5010" stroke-width="1.5"/>
+            <path d="M 82 68 Q 98 52 116 60 Q 104 78 88 88" fill="#c8a840" opacity="0.45"/>
+            <path d="M 97 102 Q 102 120 100 144" stroke="#7a5010" stroke-width="1" fill="none" opacity="0.6"/>
+            <path d="M 80 122 Q 90 132 87 152" stroke="#7a5010" stroke-width="0.7" fill="none" opacity="0.4"/>
+            <circle cx="114" cy="114" r="0.8" fill="#7a5010" opacity="0.4"/>
+          </svg>
+          <span class="card-badge">No. 8</span>
+          <div class="card-roast-tag">Caturra · Honey · Menglian</div>
+        </div>
+        <div class="card-body">
+          <p class="card-origin">Menglian · China</p>
+          <h3 class="card-title">Honey Caturra</h3>
+          <p class="card-variety">Caturra · Honey Process</p>
+          <div class="card-selectors">
+            <div class="selector-row">
+              <div class="selector-group">
+                <label>Size</label>
+                <div class="select-wrap">
+                  <select class="size-sel" onchange="updatePrice(this)">
+                    <option value="225g" selected>225g — £12.00</option>
+                    <option value="500g">500g — £26.50</option>
+                    <option value="1kg">1kg — £52.50</option>
+                  </select>
+                </div>
+              </div>
+              <div class="selector-group">
+                <label>Grind</label>
+                <div class="select-wrap">
+                  <select class="grind-sel">
+                    <option>Whole Bean</option>
+                    <option>Espresso</option>
+                    <option>French Press</option>
+                    <option>Filter / Drip</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="card-footer">
+            <span class="card-price">£12.00</span>
+            <button class="btn-add" onclick="addToCart(this)">Add to Basket</button>
+          </div>
+        </div>
+      </article>
+
+      <!-- 9. Yunnan Geisha -->
+      <article class="product-card" data-prices='{"225g":39.00,"500g":86.00,"1kg":172.00}'>
+        <div class="card-img cg-9">
+          <svg class="stone-svg" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+            <ellipse cx="100" cy="172" rx="64" ry="5" fill="#8b5a3c" opacity="0.7"/>
+            <path d="M 68 170 Q 58 140 62 108 Q 68 74 86 56 Q 100 44 114 54 Q 130 70 134 104 Q 138 140 130 170 Z" fill="#5a4060" stroke="#3a2040" stroke-width="1.5"/>
+            <path d="M 78 68 Q 96 50 114 58 Q 102 76 86 88" fill="#9870b0" opacity="0.45"/>
+            <path d="M 96 100 Q 102 122 99 146" stroke="#3a2040" stroke-width="1" fill="none" opacity="0.6"/>
+            <path d="M 78 124 Q 88 134 85 154" stroke="#3a2040" stroke-width="0.7" fill="none" opacity="0.4"/>
+            <circle cx="114" cy="114" r="0.8" fill="#3a2040" opacity="0.5"/>
+            <circle cx="88" cy="80" r="0.7" fill="#3a2040" opacity="0.4"/>
+          </svg>
+          <span class="card-badge">No. 9</span>
+          <div class="card-roast-tag">Geisha · Washed · Pu'er</div>
+        </div>
+        <div class="card-body">
+          <p class="card-origin">Pu'er · China</p>
+          <h3 class="card-title">Yunnan Geisha</h3>
+          <p class="card-variety">Geisha · Washed</p>
+          <p class="card-flavor">Jasmine, tropical fruit, citrus, lemon</p>
+          <div class="card-selectors">
+            <div class="selector-row">
+              <div class="selector-group">
+                <label>Size</label>
+                <div class="select-wrap">
+                  <select class="size-sel" onchange="updatePrice(this)">
+                    <option value="225g" selected>225g — £39.00</option>
+                    <option value="500g">500g — £86.00</option>
+                    <option value="1kg">1kg — £172.00</option>
+                  </select>
+                </div>
+              </div>
+              <div class="selector-group">
+                <label>Grind</label>
+                <div class="select-wrap">
+                  <select class="grind-sel">
+                    <option>Whole Bean</option>
+                    <option>Espresso</option>
+                    <option>French Press</option>
+                    <option>Filter / Drip</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="card-footer">
+            <span class="card-price">£39.00</span>
+            <button class="btn-add" onclick="addToCart(this)">Add to Basket</button>
+          </div>
+        </div>
+      </article>
+
+    </div>
+  </div>
+
+
+</main>
+
+<!-- Cart -->
+<div class="cart-overlay" id="cartOverlay" onclick="closeCart()"></div>
+<aside class="cart-drawer" id="cartDrawer">
+  <div class="cart-head">
+    <h3>Your Basket</h3>
+    <button class="cart-close" onclick="closeCart()"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></button>
+  </div>
+  <div class="cart-body" id="cartBody"><p class="cart-empty">Your basket is empty.</p></div>
+  <div class="cart-foot" id="cartFoot" style="display:none">
+    <div class="cart-total-row"><span>Total</span><span id="cartTotal">£0.00</span></div>
+    <p class="cart-shipping-note">Free UK delivery on orders over £25</p>
+    <button class="btn-checkout">Proceed to Checkout</button>
+  </div>
+</aside>
+<div class="toast" id="toast"></div>
+
+<footer class="footer">
+  <div class="footer-top container">
+    <div class="footer-col footer-brand-col">
+      <div class="footer-logo">Isles of Scilly Coffee Roaster</div>
+      <p>Single-origin coffee and rare Chinese tea, sourced from Yunnan and beyond. Roasted on St Martin's, Isle of Scilly. Dispatched within 48 hours.</p>
+    </div>
+    <div class="footer-col">
+      <h4>Shop</h4>
+      <a href="./coffee.html">Coffee Beans</a>
+      <a href="./tea.html">Tea</a>
+      <a href="./wholesale.html">Wholesale</a>
+    </div>
+    <div class="footer-col">
+      <h4>Information</h4>
+      <a href="./index.html">Home</a>
+      <a href="./about.html">Our Story</a>
+      <a href="./wholesale.html">Contact Us</a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div class="container footer-bottom-inner">
+      <p>© 2026 Isles of Scilly Coffee Roaster. Roasted on St Martin's, Isle of Scilly.</p>
+      <p>Registered in England &amp; Wales</p>
+    </div>
+  </div>
+</footer>
+
+<script src="./script.js"></script>
+</body>
+</html>

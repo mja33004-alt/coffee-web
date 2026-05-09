@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Isles of Scilly Coffee Roaster — Tea Collection</title>
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+
+<div class="announce-bar">Free UK delivery on orders over £25 &nbsp;·&nbsp; Roasted on St Martin's, Isle of Scilly &nbsp;·&nbsp; New 2025 harvest now in stock</div>
+
+<header class="header header--block" id="header">
+  <nav class="block-nav">
+    <a href="./about.html" style="font-size: 14px">About</a>
+    <div class="block-nav-item">
+      <button type="button" class="block-nav-trigger" aria-haspopup="true" aria-expanded="false">Shop</button>
+      <div class="block-nav-menu" role="menu">
+        <a href="./coffee.html" role="menuitem">Coffee</a>
+        <a href="./tea.html" role="menuitem">Tea</a>
+      </div>
+    </div>
+    <a href="./wholesale.html" style="font-size: 14px">Wholesale</a>
+  </nav>
+
+  <a href="./index.html" class="block-logo" aria-label="Isles of Scilly Coffee Roaster — home">
+    <span class="block-line">ISLES</span>
+    <span class="block-line">&nbsp;&nbsp;OF&nbsp;&nbsp;</span>
+    <span class="block-line">SCILLY</span>
+    <span class="block-line block-line--small">COFFEE</span>
+    <span class="block-line block-line--small">ROASTER</span>
+  </a>
+
+  <button class="block-cart" id="cartBtn" aria-label="Open basket" style="font-size: 13px; gap: 6px;">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/></svg>
+    <span class="block-cart-count" id="cartCount">0</span>
+  </button>
+</header>
+
+<section class="page-hero tea-hero" data-bg-char="茶">
+  <span class="page-hero-tag">Tea Collection</span>
+  <h1>Favourite Chinese Tea</h1>
+  <p class="page-hero-sub">Sticky rice pu-erh, ancient brick teas, fine golden black teas — all sourced from renowned Chinese tea regions.</p>
+</section>
+
+<main class="shop-main">
+  <div class="product-section">
+    <div class="product-grid">
+
+      <!-- 1. Sticky Rice Pu-erh Tea — quantity selector -->
+      <article class="product-card" data-prices='{"1pc":1.00,"5pcs":4.50,"10pcs":8.00}'>
+        <div class="card-img tg-1">
+          <span class="card-badge">Pu-erh</span>
+          <div class="card-roast-tag">Yunnan · China</div>
+        </div>
+        <div class="card-body">
+          <p class="card-origin">Yunnan · China</p>
+          <h3 class="card-title">Sticky Rice Pu-erh Tea</h3>
+          <p class="card-desc">Small compressed tea balls with the comforting aroma of sticky rice. Earthy pu-erh character with warm, honeyed rice fragrance. One piece brews multiple cups.</p>
+          <div class="card-selectors">
+            <div class="selector-row">
+              <div class="selector-group full">
+                <label>Quantity</label>
+                <div class="select-wrap">
+                  <select class="size-sel" onchange="updatePrice(this)">
+                    <option value="1pc">1 piece — £1.00</option>
+                    <option value="5pcs">5 pieces — £4.50</option>
+                    <option value="10pcs">10 pieces — £8.00</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="card-footer">
+            <span class="card-price">£1.00</span>
+            <button class="btn-add" onclick="addToCart(this)">Add to Basket</button>
+          </div>
+        </div>
+      </article>
+
+      <!-- 2. Pu-er Tea Oranges — NEW -->
+      <article class="product-card" data-prices='{"1pc":6.00,"5pcs":28.00,"10pcs":55.00}'>
+        <div class="card-img tg-8">
+          <span class="card-badge">Specialty</span>
+          <div class="card-roast-tag">Pu-erh · Orange</div>
+        </div>
+        <div class="card-body">
+          <p class="card-origin">Yunnan · China</p>
+          <h3 class="card-title">Pu-er Tea Oranges</h3>
+          <p class="card-desc">Aged pu-erh tea packed inside dried mandarin orange peel. The citrus infuses the tea over time — earthy, sweet, with a bright orange finish. A striking gift and a wonderful brew.</p>
+          <div class="card-selectors">
+            <div class="selector-row">
+              <div class="selector-group full">
+                <label>Quantity</label>
+                <div class="select-wrap">
+                  <select class="size-sel" onchange="updatePrice(this)">
+                    <option value="1pc">1 piece — £6.00</option>
+                    <option value="5pcs">5 pieces — £28.00</option>
+                    <option value="10pcs">10 pieces — £55.00</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="card-footer">
+            <span class="card-price">£6.00</span>
+            <button class="btn-add" onclick="addToCart(this)">Add to Basket</button>
+          </div>
+        </div>
+      </article>
+
+      <!-- 3. Jingyang Brick Tea -->
+      <article class="product-card product-card--fixed">
+        <div class="card-img tg-2">
+          <span class="card-badge">Brick</span>
+          <div class="card-roast-tag">Fu Brick · Shaanxi</div>
+        </div>
+        <div class="card-body">
+          <p class="card-origin">Jingyang · Shaanxi · China</p>
+          <h3 class="card-title">Jingyang Brick Tea</h3>
+          <p class="card-desc">A traditional compressed brick tea from the birthplace of Fu Brick Tea. Dense golden flowers within create a complex, sweet, earthy character.</p>
+          <div style="flex:1"></div>
+          <div class="card-footer">
+            <span class="card-price">£15.00</span>
+            <button class="btn-add" onclick="addToCartFixed(this,'Jingyang Brick Tea',15.00)">Add to Basket</button>
+          </div>
+        </div>
+      </article>
+
+      <!-- 4. Jin Jun Mei — updated prices -->
+      <article class="product-card" data-prices='{"20g":12.00,"50g":30.00,"100g":60.00}'>
+        <div class="card-img tg-3">
+          <span class="card-badge">Premium</span>
+          <div class="card-roast-tag">Golden Black Tea</div>
+        </div>
+        <div class="card-body">
+          <p class="card-origin">Wuyishan · Fujian · China</p>
+          <h3 class="card-title">Jin Jun Mei</h3>
+          <p class="card-desc">One of China's most prized black teas — golden-tipped buds handpicked in spring. Honey, sweet potato, fresh pine. Naturally sweet, no bitterness.</p>
+          <div class="card-selectors">
+            <div class="selector-row">
+              <div class="selector-group full">
+                <label>Size</label>
+                <div class="select-wrap">
+                  <select class="size-sel" onchange="updatePrice(this)">
+                    <option value="20g">20g — £12.00</option>
+                    <option value="50g" selected>50g — £30.00</option>
+                    <option value="100g">100g — £60.00</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="card-footer">
+            <span class="card-price">£30.00</span>
+            <button class="btn-add" onclick="addToCart(this)">Add to Basket</button>
+          </div>
+        </div>
+      </article>
+
+      <!-- 5. Yinghong No. 9 -->
+      <article class="product-card" data-prices='{"20g":10.00,"50g":22.00,"100g":40.00}'>
+        <div class="card-img tg-4">
+          <span class="card-badge">Guangdong</span>
+          <div class="card-roast-tag">Black Tea</div>
+        </div>
+        <div class="card-body">
+          <p class="card-origin">Guangdong · China</p>
+          <h3 class="card-title">Yinghong No. 9 Tea</h3>
+          <p class="card-desc">Rich, malty, full-bodied with dark chocolate and dried fruit. Smooth with a long, warming finish — excellent with milk.</p>
+          <div class="card-selectors">
+            <div class="selector-row">
+              <div class="selector-group full">
+                <label>Size</label>
+                <div class="select-wrap">
+                  <select class="size-sel" onchange="updatePrice(this)">
+                    <option value="20g">20g — £10.00</option>
+                    <option value="50g" selected>50g — £22.00</option>
+                    <option value="100g">100g — £40.00</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="card-footer">
+            <span class="card-price">£22.00</span>
+            <button class="btn-add" onclick="addToCart(this)">Add to Basket</button>
+          </div>
+        </div>
+      </article>
+
+      <!-- 6. Fossil Tea — updated prices -->
+      <article class="product-card" data-prices='{"20g":8.00,"50g":20.00,"100g":40.00}'>
+        <div class="card-img tg-5">
+          <span class="card-badge">Aged · Rare</span>
+          <div class="card-roast-tag">Compressed Tea</div>
+        </div>
+        <div class="card-body">
+          <p class="card-origin">Yunnan · China</p>
+          <h3 class="card-title">Fossil Tea</h3>
+          <p class="card-desc">Compressed and aged tea shaped like ancient fossils. Deep earth, aged wood, and subtle sweetness across multiple infusions. Meditative and complex.</p>
+          <div class="card-selectors">
+            <div class="selector-row">
+              <div class="selector-group full">
+                <label>Size</label>
+                <div class="select-wrap">
+                  <select class="size-sel" onchange="updatePrice(this)">
+                    <option value="20g">20g — £8.00</option>
+                    <option value="50g" selected>50g — £20.00</option>
+                    <option value="100g">100g — £40.00</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="card-footer">
+            <span class="card-price">£20.00</span>
+            <button class="btn-add" onclick="addToCart(this)">Add to Basket</button>
+          </div>
+        </div>
+      </article>
+
+      <!-- 7. Designed Tea Blend -->
+      <article class="product-card" data-prices='{"20g":9.00,"50g":20.00,"100g":36.00}'>
+        <div class="card-img tg-6">
+          <span class="card-badge">House Blend</span>
+          <div class="card-roast-tag">Yunnan Blend</div>
+        </div>
+        <div class="card-body">
+          <p class="card-origin">Yunnan · China</p>
+          <h3 class="card-title">Designed Tea Blend</h3>
+          <p class="card-desc">A balanced everyday blend from Yunnan gardens. Gentle earth, dried fruit, soft sweetness. An accessible introduction to Yunnan tea.</p>
+          <div class="card-selectors">
+            <div class="selector-row">
+              <div class="selector-group full">
+                <label>Size</label>
+                <div class="select-wrap">
+                  <select class="size-sel" onchange="updatePrice(this)">
+                    <option value="20g">20g — £9.00</option>
+                    <option value="50g" selected>50g — £20.00</option>
+                    <option value="100g">100g — £36.00</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="card-footer">
+            <span class="card-price">£20.00</span>
+            <button class="btn-add" onclick="addToCart(this)">Add to Basket</button>
+          </div>
+        </div>
+      </article>
+
+      <!-- 8. Tea Knife -->
+      <article class="product-card product-card--fixed">
+        <div class="card-img tg-7">
+          <div class="card-roast-tag">Accessory</div>
+        </div>
+        <div class="card-body">
+          <p class="card-origin">Tea Accessory</p>
+          <h3 class="card-title">Tea Knife (Cha Dao)</h3>
+          <p class="card-desc">Stainless-steel cha dao for prying compressed pu-erh cakes and brick teas. Wooden handle. Essential for any pu-erh enthusiast.</p>
+          <div style="flex:1"></div>
+          <div class="card-footer">
+            <span class="card-price">£5.00</span>
+            <button class="btn-add" onclick="addToCartFixed(this,'Tea Knife (Cha Dao)',5.00)">Add to Basket</button>
+          </div>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</main>
+
+<!-- Cart -->
+<div class="cart-overlay" id="cartOverlay" onclick="closeCart()"></div>
+<aside class="cart-drawer" id="cartDrawer">
+  <div class="cart-head">
+    <h3>Your Basket</h3>
+    <button class="cart-close" onclick="closeCart()"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></button>
+  </div>
+  <div class="cart-body" id="cartBody"><p class="cart-empty">Your basket is empty.</p></div>
+  <div class="cart-foot" id="cartFoot" style="display:none">
+    <div class="cart-total-row"><span>Total</span><span id="cartTotal">£0.00</span></div>
+    <p class="cart-shipping-note">Free UK delivery on orders over £25</p>
+    <button class="btn-checkout">Proceed to Checkout</button>
+  </div>
+</aside>
+<div class="toast" id="toast"></div>
+
+<footer class="footer">
+  <div class="footer-top container">
+    <div class="footer-col footer-brand-col">
+      <div class="footer-logo">Isles of Scilly Coffee Roaster</div>
+      <p>Single-origin coffee and rare Chinese tea. Roasted on St Martin's, Isle of Scilly. Dispatched within 48 hours.</p>
+    </div>
+    <div class="footer-col">
+      <h4>Shop</h4>
+      <a href="./coffee.html">Coffee Beans</a>
+      <a href="./tea.html">Tea</a>
+      <a href="./wholesale.html">Wholesale</a>
+    </div>
+    <div class="footer-col">
+      <h4>Information</h4>
+      <a href="./index.html">Home</a>
+      <a href="./about.html">Our Story</a>
+      <a href="./wholesale.html">Contact Us</a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div class="container footer-bottom-inner">
+      <p>© 2026 Isles of Scilly Coffee Roaster. Roasted on St Martin's, Isle of Scilly.</p>
+      <p>Registered in England &amp; Wales</p>
+    </div>
+  </div>
+</footer>
+
+<script src="./script.js"></script>
+</body>
+</html>
