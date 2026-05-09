@@ -204,7 +204,7 @@ a { color: inherit; text-decoration: none; }
   text-align: center;
   position: relative;
   overflow: hidden;
-  min-height: 82vh;
+  min-height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -494,7 +494,7 @@ a { color: inherit; text-decoration: none; }
 }
 
 /* ── Home Featured Products ── */
-.home-featured { padding: 80px 28px; }
+.home-featured { padding: 80px 28px; min-height: 100vh; display: flex; flex-direction: column; justify-content: center; }
 
 .home-featured .section-title {
   text-align: center;
@@ -522,6 +522,11 @@ a { color: inherit; text-decoration: none; }
   border-bottom: 1px solid var(--granite-300);
   padding: 64px 28px;
   text-align: center;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 .home-cta-banner h2 {
@@ -1851,9 +1856,12 @@ a { color: inherit; text-decoration: none; }
   border-top: 1px solid var(--granite-300);
   border-bottom: 1px solid var(--granite-300);
   padding: 140px 28px 160px;
-  min-height: 540px;
+  min-height: 100vh;
   overflow: hidden;
   isolation: isolate;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .roastery-overlay {
@@ -2114,6 +2122,10 @@ body:has(.header--block) .announce-bar {
   padding: 88px 28px 96px;
   background: linear-gradient(180deg, var(--paper) 0%, var(--sand) 100%);
   border-top: 1px solid var(--granite-300);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .section-title--split {
