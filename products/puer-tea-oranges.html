@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Isles of Scilly Coffee Roaster — Pu-er Tea Oranges</title>
+  <link rel="stylesheet" href="../styles.css" />
+</head>
+<body>
+
+<div class="announce-bar">Free UK delivery on orders over £25 &nbsp;·&nbsp; Hand Roasted on St Martin's, Isle of Scilly &nbsp;·&nbsp; New 2026 harvest now in stock</div>
+
+<header class="header header--block" id="header">
+  <nav class="block-nav">
+    <a href="../about.html" style="font-size: 14px">About</a>
+    <div class="block-nav-item">
+      <button type="button" class="block-nav-trigger" aria-haspopup="true" aria-expanded="false">Shop</button>
+      <div class="block-nav-menu" role="menu">
+        <a href="../coffee.html" role="menuitem">Coffee</a>
+        <a href="../tea.html" role="menuitem">Tea</a>
+      </div>
+    </div>
+    <a href="../wholesale.html" style="font-size: 14px">Wholesale</a>
+  </nav>
+  <a href="../index.html" class="block-logo" aria-label="Isles of Scilly Coffee Roaster — home">
+    <span class="block-line">ISLES</span>
+    <span class="block-line">&nbsp;&nbsp;OF&nbsp;&nbsp;</span>
+    <span class="block-line">SCILLY</span>
+    <span class="block-line block-line--small">COFFEE</span>
+    <span class="block-line block-line--small">ROASTER</span>
+  </a>
+  <button class="block-cart" id="cartBtn" aria-label="Open basket" style="font-size: 13px; gap: 6px;">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/></svg>
+    <span class="block-cart-count" id="cartCount">0</span>
+  </button>
+</header>
+
+<div class="breadcrumb container">
+  <a href="../tea.html">Tea</a>
+  <span class="breadcrumb-sep">›</span>
+  <span class="breadcrumb-current">Pu-er Tea Oranges</span>
+</div>
+
+<div class="product-detail" data-prices='{"1pc":6.00,"5pcs":28.00,"10pcs":55.00}' id="productPurchaseForm" data-product-name="Pu-er Tea Oranges">
+  <div class="product-detail-img">
+    <div class="detail-img-area tg-8">
+      <span class="detail-img-char">橘</span>
+      <div class="detail-badges">
+        <span class="detail-badge">Specialty</span>
+        <span class="detail-badge">Yunnan · China</span>
+      </div>
+    </div>
+  </div>
+  <div class="product-detail-info">
+    <div class="detail-origin-tag">Yunnan · China</div>
+    <h1>Pu-er Tea Oranges</h1>
+    <div class="detail-tasting-pills">
+      <span class="tasting-pill">Earthy</span>
+      <span class="tasting-pill">Sweet Orange</span>
+      <span class="tasting-pill">Citrus Finish</span>
+    </div>
+    <p class="detail-desc">Aged pu-erh tea packed inside dried whole mandarin orange peel. Over time, the citrus infuses the tea — creating an earthy, sweet cup with a distinctively bright orange finish. Each piece makes a striking gift and a wonderful daily brew. A masterpiece of Chinese tea craft.</p>
+    <div class="detail-spec-list">
+      <div class="detail-spec-row"><span class="spec-label">Type</span><span class="spec-value">Aged Pu-erh in orange peel</span></div>
+      <div class="detail-spec-row"><span class="spec-label">Format</span><span class="spec-value">Whole dried mandarin</span></div>
+      <div class="detail-spec-row"><span class="spec-label">Origin</span><span class="spec-value">Yunnan, China</span></div>
+    </div>
+    <div class="detail-brew-guide">
+      <span class="detail-brew-label">Brewing Guide</span>
+      <p>Break the orange peel to release the tea leaves. Rinse with boiling water (95°C), then steep 45–90 seconds. Re-steep 4–5 times. Can also be simmered gently in water for a stronger brew.</p>
+    </div>
+    <div class="purchase-form">
+      <div class="purchase-form-row">
+        <div class="selector-group">
+          <label>Quantity</label>
+          <div class="select-wrap">
+            <select class="size-sel" onchange="updatePrice(this)">
+              <option value="1pc" selected>1 piece — £6.00</option>
+              <option value="5pcs">5 pieces — £28.00</option>
+              <option value="10pcs">10 pieces — £55.00</option>
+            </select>
+          </div>
+        </div>
+      </div>
+      <div class="price-display-row">
+        <span class="price-big">£6.00</span>
+        <span class="price-note">incl. VAT · free UK delivery over £25</span>
+      </div>
+      <button class="btn-add-lg" onclick="addToCartDetail()">Add to Basket</button>
+    </div>
+    <a href="../tea.html" class="back-to-coffee">← Back to Tea</a>
+  </div>
+</div>
+
+<div class="cart-overlay" id="cartOverlay" onclick="closeCart()"></div>
+<aside class="cart-drawer" id="cartDrawer">
+  <div class="cart-head">
+    <h3>Your Basket</h3>
+    <button class="cart-close" onclick="closeCart()"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></button>
+  </div>
+  <div class="cart-body" id="cartBody"><p class="cart-empty">Your basket is empty.</p></div>
+  <div class="cart-foot" id="cartFoot" style="display:none">
+    <div class="cart-total-row"><span>Total</span><span id="cartTotal">£0.00</span></div>
+    <p class="cart-shipping-note">Free UK delivery on orders over £25</p>
+    <button class="btn-checkout">Proceed to Checkout</button>
+  </div>
+</aside>
+<div class="toast" id="toast"></div>
+
+<footer class="footer">
+  <div class="footer-top container">
+    <div class="footer-col footer-brand-col">
+      <div class="footer-logo">Isles of Scilly Coffee Roaster</div>
+      <p>Single-origin coffee and rare Chinese tea. Roasted on St Martin's, Isle of Scilly. Dispatched within 48 hours.</p>
+    </div>
+    <div class="footer-col">
+      <h4>Shop</h4>
+      <a href="../coffee.html">Coffee Beans</a>
+      <a href="../tea.html">Tea</a>
+      <a href="../wholesale.html">Wholesale</a>
+    </div>
+    <div class="footer-col">
+      <h4>Information</h4>
+      <a href="../index.html">Home</a>
+      <a href="../about.html">Our Story</a>
+      <a href="../wholesale.html">Contact Us</a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div class="container footer-bottom-inner">
+      <p>© 2026 Isles of Scilly Coffee Roaster. Roasted on St Martin's, Isle of Scilly.</p>
+      <p>Registered in England &amp; Wales</p>
+    </div>
+  </div>
+</footer>
+<script src="../script.js"></script>
+</body>
+</html>

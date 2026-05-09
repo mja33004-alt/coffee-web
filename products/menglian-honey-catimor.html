@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Isles of Scilly Coffee Roaster — Honey Catimor</title>
+  <link rel="stylesheet" href="../styles.css" />
+</head>
+<body>
+
+<div class="announce-bar">Free UK delivery on orders over £25 &nbsp;·&nbsp; Hand Roasted on St Martin's, Isle of Scilly &nbsp;·&nbsp; New 2026 harvest now in stock</div>
+
+<header class="header header--block" id="header">
+  <nav class="block-nav">
+    <a href="../about.html" style="font-size: 14px">About</a>
+    <div class="block-nav-item">
+      <button type="button" class="block-nav-trigger" aria-haspopup="true" aria-expanded="false">Shop</button>
+      <div class="block-nav-menu" role="menu">
+        <a href="../coffee.html" role="menuitem">Coffee</a>
+        <a href="../tea.html" role="menuitem">Tea</a>
+      </div>
+    </div>
+    <a href="../wholesale.html" style="font-size: 14px">Wholesale</a>
+  </nav>
+  <a href="../index.html" class="block-logo" aria-label="Isles of Scilly Coffee Roaster — home">
+    <span class="block-line">ISLES</span>
+    <span class="block-line">&nbsp;&nbsp;OF&nbsp;&nbsp;</span>
+    <span class="block-line">SCILLY</span>
+    <span class="block-line block-line--small">COFFEE</span>
+    <span class="block-line block-line--small">ROASTER</span>
+  </a>
+  <button class="block-cart" id="cartBtn" aria-label="Open basket" style="font-size: 13px; gap: 6px;">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/></svg>
+    <span class="block-cart-count" id="cartCount">0</span>
+  </button>
+</header>
+
+<div class="breadcrumb container">
+  <a href="../coffee.html">Coffee</a>
+  <span class="breadcrumb-sep">›</span>
+  <span class="breadcrumb-current">Honey Catimor</span>
+</div>
+
+<div class="product-detail" data-prices='{"225g":10.50,"500g":23.00,"1kg":45.50}' id="productPurchaseForm" data-product-name="Honey Catimor">
+  <div class="product-detail-img">
+    <div class="detail-img-area cg-5">
+      <svg class="stone-svg" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+        <ellipse cx="100" cy="172" rx="60" ry="5" fill="#8b5a3c" opacity="0.7"/>
+        <path d="M 68 170 Q 60 138 66 104 Q 74 70 92 52 Q 104 44 116 54 Q 130 72 134 106 Q 138 140 132 170 Z" fill="#8b6830" stroke="#6b4810" stroke-width="1.5"/>
+        <path d="M 78 66 Q 96 50 114 58 Q 102 76 86 86" fill="#c4a050" opacity="0.45"/>
+        <path d="M 95 100 Q 100 118 98 142" stroke="#6b4810" stroke-width="1" fill="none" opacity="0.6"/>
+        <path d="M 78 120 Q 88 130 85 150" stroke="#6b4810" stroke-width="0.7" fill="none" opacity="0.4"/>
+        <circle cx="112" cy="112" r="0.8" fill="#6b4810" opacity="0.4"/>
+      </svg>
+      <div class="detail-badges">
+        <span class="detail-badge">Honey</span>
+        <span class="detail-badge">1,400m</span>
+      </div>
+    </div>
+  </div>
+  <div class="product-detail-info">
+    <div class="detail-origin-tag">Menglian · Yunnan · China</div>
+    <h1>Honey Catimor</h1>
+    <div class="detail-tasting-pills">
+      <span class="tasting-pill">Green Tea</span>
+      <span class="tasting-pill">Sticky Rice</span>
+      <span class="tasting-pill">High Sweetness</span>
+    </div>
+    <p class="detail-desc">A honey-processed Catimor from Menglian with an unusually gentle, tea-like character. Reminiscent of green tea and sticky rice, with minimal acidity and high natural sweetness. An accessible, meditative cup unlike any standard coffee.</p>
+    <div class="detail-spec-list">
+      <div class="detail-spec-row"><span class="spec-label">Variety</span><span class="spec-value">Catimor</span></div>
+      <div class="detail-spec-row"><span class="spec-label">Process</span><span class="spec-value">Honey</span></div>
+      <div class="detail-spec-row"><span class="spec-label">Altitude</span><span class="spec-value">1,400m</span></div>
+      <div class="detail-spec-row"><span class="spec-label">Screen</span><span class="spec-value">14–18#</span></div>
+      <div class="detail-spec-row"><span class="spec-label">Origin</span><span class="spec-value">Menglian, Yunnan, China</span></div>
+    </div>
+    <div class="detail-brew-guide">
+      <span class="detail-brew-label">Brewing Guide</span>
+      <p>Best as filter or pour-over at lower temperature. 90°C, 1:16 ratio. Slow pour recommended.</p>
+    </div>
+    <div class="purchase-form">
+      <div class="purchase-form-row">
+        <div class="selector-group">
+          <label>Size</label>
+          <div class="select-wrap">
+            <select class="size-sel" onchange="updatePrice(this)">
+              <option value="225g" selected>225g — £10.50</option>
+              <option value="500g">500g — £23.00</option>
+              <option value="1kg">1kg — £45.50</option>
+            </select>
+          </div>
+        </div>
+        <div class="selector-group">
+          <label>Grind</label>
+          <div class="select-wrap">
+            <select class="grind-sel">
+              <option>Whole Bean</option>
+              <option>Espresso</option>
+              <option>French Press</option>
+              <option>Filter / Drip</option>
+            </select>
+          </div>
+        </div>
+      </div>
+      <div class="price-display-row">
+        <span class="price-big">£10.50</span>
+        <span class="price-note">incl. VAT · free UK delivery over £25</span>
+      </div>
+      <button class="btn-add-lg" onclick="addToCartDetail()">Add to Basket</button>
+    </div>
+    <a href="../coffee.html" class="back-to-coffee">← Back to Coffee</a>
+  </div>
+</div>
+
+<div class="cart-overlay" id="cartOverlay" onclick="closeCart()"></div>
+<aside class="cart-drawer" id="cartDrawer">
+  <div class="cart-head">
+    <h3>Your Basket</h3>
+    <button class="cart-close" onclick="closeCart()"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></button>
+  </div>
+  <div class="cart-body" id="cartBody"><p class="cart-empty">Your basket is empty.</p></div>
+  <div class="cart-foot" id="cartFoot" style="display:none">
+    <div class="cart-total-row"><span>Total</span><span id="cartTotal">£0.00</span></div>
+    <p class="cart-shipping-note">Free UK delivery on orders over £25</p>
+    <button class="btn-checkout">Proceed to Checkout</button>
+  </div>
+</aside>
+<div class="toast" id="toast"></div>
+
+<footer class="footer">
+  <div class="footer-top container">
+    <div class="footer-col footer-brand-col">
+      <div class="footer-logo">Isles of Scilly Coffee Roaster</div>
+      <p>Single-origin coffee and rare Chinese tea. Roasted on St Martin's, Isle of Scilly. Dispatched within 48 hours.</p>
+    </div>
+    <div class="footer-col">
+      <h4>Shop</h4>
+      <a href="../coffee.html">Coffee Beans</a>
+      <a href="../tea.html">Tea</a>
+      <a href="../wholesale.html">Wholesale</a>
+    </div>
+    <div class="footer-col">
+      <h4>Information</h4>
+      <a href="../index.html">Home</a>
+      <a href="../about.html">Our Story</a>
+      <a href="../wholesale.html">Contact Us</a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div class="container footer-bottom-inner">
+      <p>© 2026 Isles of Scilly Coffee Roaster. Roasted on St Martin's, Isle of Scilly.</p>
+      <p>Registered in England &amp; Wales</p>
+    </div>
+  </div>
+</footer>
+<script src="../script.js"></script>
+</body>
+</html>
